@@ -1,0 +1,97 @@
+name: Continuous integration checks
+
+on:
+  # Run on PRs.
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  # Allow manually triggering the workflow (in case something breaks).
+  workflow_dispatch:
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: ./wp-content/themes/academy-theme
+
+jobs:
+  phpcs:
+    name: PHPCS check on PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [7.4]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: PHP setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2, cs2pr
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v2
+        with:
+          working-directory: ./wp-content/themes/wordpress-cicd
+
+      - name: Check coding standards using PHPCS
+        run: composer standards:check -- --runtime-set testVersion ${{ matrix.php }}- --report-full --report-checkstyle=./phpcs-report.xml
+
+      - name: Show PHPCS results in PR
+        run: cs2pr ./phpcs-report.xml
+
+  phpstan:
+    name: PHPStan check
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [7.4]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: PHP setup
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
+          tools: composer:v2
+
+      - name: Install Composer dependencies
+        uses: ramsey/composer-install@v2
+        with:
+          working-directory: ./wp-content/themes/wordpress-cicd
+
+      - name: Check code consistency using PHPStan
+        run: composer analyze
+
+  assetLint:
+    name: ES Lint and Stylelint checks
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [16.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run lintJs
+      - run: npm run lintStyle
