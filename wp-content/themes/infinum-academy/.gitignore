@@ -1,0 +1,14 @@
+# Project Specific
+/public
+/vendor
+/node_modules
+/assets
+.storybook
+.DS_Store
+
+.*
+!.gitignore
+
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+package-lock.json
