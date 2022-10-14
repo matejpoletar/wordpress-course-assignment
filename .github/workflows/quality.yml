@@ -16,7 +16,7 @@ concurrency:
 
 defaults:
   run:
-    working-directory: ./wp-content/themes/academy-theme
+    working-directory: ./wp-content/themes/infinum-academy
 
 jobs:
   phpcs:
@@ -41,7 +41,7 @@ jobs:
       - name: Install Composer dependencies
         uses: ramsey/composer-install@v2
         with:
-          working-directory: ./wp-content/themes/wordpress-cicd
+          working-directory: ./wp-content/themes/infinum-academy
 
       - name: Check coding standards using PHPCS
         run: composer standards:check -- --runtime-set testVersion ${{ matrix.php }}- --report-full --report-checkstyle=./phpcs-report.xml
@@ -71,7 +71,7 @@ jobs:
       - name: Install Composer dependencies
         uses: ramsey/composer-install@v2
         with:
-          working-directory: ./wp-content/themes/wordpress-cicd
+          working-directory: ./wp-content/themes/infinum-academy
 
       - name: Check code consistency using PHPStan
         run: composer analyze
