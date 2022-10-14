@@ -1,0 +1,13 @@
+# WP Core
+/wp-admin/
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+!wp-config-project.php
+
+.valetphprc
