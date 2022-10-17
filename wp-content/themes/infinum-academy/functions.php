@@ -2,7 +2,7 @@
 
 /**
  * Theme Name: Infinum Academy
- * Description: Infinum Academy Wordpress course
+ * Description: Infinum Academy WordPress course
  * Author: Team Eightshift
  * Author URI: https://eightshift.com/
  * Version: 1.0.0

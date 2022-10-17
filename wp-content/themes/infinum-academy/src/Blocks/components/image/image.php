@@ -66,6 +66,7 @@ $imgClass = Components::classnames([
 			?>
 		<?php } ?>
 
-		<img src="<?php echo esc_url($imageUrl['large']); ?>" class="<?php echo esc_attr($imgClass); ?>" alt="<?php echo esc_attr($imageAlt); ?>" />
+		<img src="<?php echo esc_url($imageUrl['large']); ?>" class="<?php echo esc_attr($imgClass); ?>" 
+			alt="<?php echo esc_attr($imageAlt); ?>" />
 	</picture>
 <?php } ?>

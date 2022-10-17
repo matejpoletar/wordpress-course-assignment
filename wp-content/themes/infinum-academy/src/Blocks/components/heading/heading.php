@@ -41,7 +41,8 @@ $unique = Components::getUnique();
 
 <?php echo Components::outputCssVariables($attributes, $manifest, $unique, $globalManifest); ?>
 
-<<?php echo esc_attr($headingLevel); ?> class="<?php echo esc_attr($headingClass); ?>" data-id="<?php echo esc_attr($unique); ?>">
+<<?php echo esc_attr($headingLevel); ?> class="<?php echo esc_attr($headingClass); ?>"
+	data-id="<?php echo esc_attr($unique); ?>">
 	<?php
 		// phpcs:ignore Eightshift.Security.ComponentsEscape.OutputNotEscaped
 		echo $headingContent;
