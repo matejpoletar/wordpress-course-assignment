@@ -1,0 +1,7 @@
+# Project Specific
+/public
+/vendor
+/node_modules
+
+.storybook
+.DS_Store
