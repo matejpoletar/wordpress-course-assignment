@@ -34,6 +34,8 @@ class Media extends AbstractMedia
 			\add_filter('wp_update_attachment_metadata', [$this, 'generateWebPMedia'], 10, 2);
 			\add_action('delete_attachment', [$this, 'deleteWebPMedia']);
 		}
+
+		\add_filter('image_size_names_choose', [$this, 'myCustomSizes']);
 	}
 
 
@@ -51,5 +53,21 @@ class Media extends AbstractMedia
 		// Enables HTML5 markup support and explicitly states support for script and style tags, so WP doesn't insert the type attribute on those tags.
 		// Registering the type attribute is not compliant with the HTML5 specification.
 		\add_theme_support('post-thumbnails');
+
+		// Register custom image size 600x600px.
+		\add_image_size('square600', 600, 600);
+	}
+
+	/**
+	 * Map custom image size strings to labels
+	 *
+	 * @param array<string> $sizes custom sizes array.
+	 * @return array<string>
+	 */
+	public function myCustomSizes($sizes): array
+	{
+		return \array_merge($sizes, [
+			'square600' => \__('Medium size image', 'infinum-academy')
+		]);
 	}
 }

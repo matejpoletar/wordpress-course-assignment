@@ -1,6 +1,8 @@
 # WP Core
 /wp-admin/
 /wp-includes/
+/wp-content/uploads/
+/wp-content/plugins/
 /index.php
 /license.txt
 /readme.html
