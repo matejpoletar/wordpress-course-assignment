@@ -52,6 +52,10 @@
 				"value": "big"
 			},
 			{
+				"label": "Bigger (52)",
+				"value": "bigger"
+			},
+			{
 				"label": "Huge (68)",
 				"value": "huge"
 			}
@@ -76,15 +80,21 @@
 			"tiny": [
 				{
 					"variable": {
-						"heading-font-size": "0.875rem",
+						"heading-font-size": "0.75rem",
 						"heading-line-height": "1"
+					}
+				},
+				{
+					"breakpoint": "tablet",
+					"variable": {
+						"heading-font-size": "0.875rem"
 					}
 				}
 			],
 			"small": [
 				{
 					"variable": {
-						"heading-font-size": "1.1rem",
+						"heading-font-size": "0.9rem",
 						"heading-line-height": "1"
 					}
 				},
@@ -112,7 +122,7 @@
 			"big": [
 				{
 					"variable": {
-						"heading-font-size": "1.5rem",
+						"heading-font-size": "1.1rem",
 						"heading-line-height": "1"
 					}
 				},
@@ -120,6 +130,20 @@
 					"breakpoint": "tablet",
 					"variable": {
 						"heading-font-size": "2.5rem"
+					}
+				}
+			],
+			"bigger": [
+				{
+					"variable": {
+						"heading-font-size": "1.25rem",
+						"heading-line-height": "1"
+					}
+				},
+				{
+					"breakpoint": "tablet",
+					"variable": {
+						"heading-font-size": "3.25rem"
 					}
 				}
 			],
