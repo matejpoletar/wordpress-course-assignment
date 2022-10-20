@@ -71,8 +71,8 @@
 			"green",
 			"ocean",
 			"yellow",
-			"blue",
-			"red",
+			"minsk",
+			"illusion",
 			"cream",
 			"mist",
 			"dew",
@@ -130,7 +130,7 @@
 					"variable": {
 						"lists-color": "var(--global-colors-primary)",
 						"lists-link-color": "var(--global-colors-black)",
-						"lists-link-color-hover": "var(--global-colors-blue)"
+						"lists-link-color-hover": "var(--global-colors-minsk)"
 					}
 				}
 			],
@@ -139,7 +139,7 @@
 					"variable": {
 						"lists-color": "var(--global-colors-black)",
 						"lists-link-color": "var(--global-colors-primary)",
-						"lists-link-color-hover": "var(--global-colors-blue)"
+						"lists-link-color-hover": "var(--global-colors-minsk)"
 					}
 				}
 			],
@@ -170,21 +170,21 @@
 					}
 				}
 			],
-			"blue": [
+			"minsk": [
 				{
 					"variable": {
-						"lists-color": "var(--global-colors-blue)",
+						"lists-color": "var(--global-colors-minsk)",
 						"lists-link-color": "var(--global-colors-black)",
 						"lists-link-color-hover": "var(--global-colors-primary)"
 					}
 				}
 			],
-			"red": [
+			"illusion": [
 				{
 					"variable": {
-						"lists-color": "var(--global-colors-red)",
+						"lists-color": "var(--global-colors-illusion)",
 						"lists-link-color": "var(--global-colors-black)",
-						"lists-link-color-hover": "var(--global-colors-blue)"
+						"lists-link-color-hover": "var(--global-colors-minsk)"
 					}
 				}
 			],
@@ -210,7 +210,7 @@
 				{
 					"variable": {
 						"lists-color": "var(--global-colors-eightshift)",
-						"lists-link-color": "var(--global-colors-blue)",
+						"lists-link-color": "var(--global-colors-minsk)",
 						"lists-link-color-hover": "var(--global-colors-primary)"
 					}
 				}

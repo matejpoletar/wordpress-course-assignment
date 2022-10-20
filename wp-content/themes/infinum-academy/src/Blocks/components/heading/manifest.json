@@ -72,17 +72,11 @@
 		],
 		"headingColor": [
 			"primary",
-			"black",
 			"white",
-			"green",
-			"ocean",
-			"yellow",
-			"blue",
-			"red",
-			"cream",
-			"mist",
-			"dew",
-			"eightshift"
+			"grey",
+			"illusion",
+			"minsk",
+			"seance"
 		],
 		"headingWeight": [
 			{
@@ -103,6 +97,7 @@
 				"label": "Source Sans Pro",
 				"value": "source_sans_pro"
 			}
+
 		]
 	},
 	"variables": {

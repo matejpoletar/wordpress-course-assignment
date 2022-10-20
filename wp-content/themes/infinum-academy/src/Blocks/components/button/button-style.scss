@@ -7,8 +7,8 @@
 
 	padding: var(--button-padding-vertical, 0.6rem) var(--button-padding-horizontal, 1.5rem);
 
-	border: none;
-	border-radius: var(--button-border-radius, 5rem);
+	border: var(--button-border);
+	border-radius: var(--button-border-radius, 0.5rem);
 
 	opacity: var(--button-opacity, 1);
 	color: var(--button-scoped-color, var(--button-color, var(--global-colors-white)));
@@ -34,7 +34,7 @@
 	}
 
 	&:disabled {
-		--button-scoped-background-color: var(--global-colors-light);
+		--button-scoped-background-color: var(--global-colors-grey);
 		--button-cursor: not-allowed;
 	}
 

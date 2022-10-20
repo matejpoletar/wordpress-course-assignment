@@ -26,7 +26,7 @@
 		},
 		"buttonColor": {
 			"type": "string",
-			"default": "primary"
+			"default": "illusion"
 		},
 		"buttonWidth": {
 			"type": "string",
@@ -82,13 +82,11 @@
 		],
 		"buttonColor": [
 			"primary",
-			"black",
-			"blue",
-			"yellow",
-			"ocean",
-			"green",
-			"red",
-			"white"
+			"white",
+			"grey",
+			"illusion",
+			"minsk",
+			"seance"
 		]
 	},
 	"variables": {
@@ -99,93 +97,70 @@
 						"button-color": "var(--global-colors-white)",
 						"button-color-hover": "var(--global-colors-white)",
 						"button-background-color": "var(--global-colors-primary)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-primary)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
-					}
-				}
-			],
-			"black": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-white)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-black)",
 						"button-background-color-hover": "var(--global-colors-primary)",
-						"button-color-is-link": "var(--global-colors-black)",
+						"button-color-is-link": "var(--global-colors-primary)",
 						"button-color-is-link-hover": "var(--global-colors-primary)"
-					}
-				}
-			],
-			"blue": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-white)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-blue)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-blue)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
-					}
-				}
-			],
-			"yellow": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-black)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-yellow)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-yellow)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
-					}
-				}
-			],
-			"ocean": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-black)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-ocean)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-ocean)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
-					}
-				}
-			],
-			"green": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-black)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-green)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-green)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
-					}
-				}
-			],
-			"red": [
-				{
-					"variable": {
-						"button-color": "var(--global-colors-white)",
-						"button-color-hover": "var(--global-colors-white)",
-						"button-background-color": "var(--global-colors-red)",
-						"button-background-color-hover": "var(--global-colors-black)",
-						"button-color-is-link": "var(--global-colors-red)",
-						"button-color-is-link-hover": "var(--global-colors-black)"
 					}
 				}
 			],
 			"white": [
 				{
 					"variable": {
-						"button-color": "var(--global-colors-black)",
-						"button-color-hover": "var(--global-colors-white)",
+						"button-color": "var(--global-colors-primary)",
+						"button-color-hover": "var(--global-colors-primary)",
 						"button-background-color": "var(--global-colors-white)",
-						"button-background-color-hover": "var(--global-colors-yellow)",
+						"button-background-color-hover": "var(--global-colors-grey)",
 						"button-color-is-link": "var(--global-colors-white)",
-						"button-color-is-link-hover": "var(--global-colors-yellow)"
+						"button-color-is-link-hover": "var(--global-colors-white)",
+						"button-border": "1px solid var(--global-colors-primary)"
+					}
+				}
+			],
+			"grey": [
+				{
+					"variable": {
+						"button-color": "var(--global-colors-primary)",
+						"button-color-hover": "var(--global-colors-primary)",
+						"button-background-color": "var(--global-colors-grey)",
+						"button-background-color-hover": "var(--global-colors-grey)",
+						"button-color-is-link": "var(--global-colors-grey)",
+						"button-color-is-link-hover": "var(--global-colors-grey)"
+					}
+				}
+			],
+			"illusion": [
+				{
+					"variable": {
+						"button-color": "var(--global-colors-white)",
+						"button-color-hover": "var(--global-colors-white)",
+						"button-background-color": "var(--global-colors-illusion)",
+						"button-background-color-hover": "var(--global-colors-illusion-opaque)",
+						"button-color-is-link": "var(--global-colors-illusion)",
+						"button-color-is-link-hover": "var(--global-colors-illusion)"
+					}
+				}
+			],
+			"minsk": [
+				{
+					"variable": {
+						"button-color": "var(--global-colors-white)",
+						"button-color-hover": "var(--global-colors-white)",
+						"button-background-color": "var(--global-colors-minsk)",
+						"button-background-color-hover": "var(--global-colors-minsk-opaque)",
+						"button-color-is-link": "var(--global-colors-minsk)",
+						"button-color-is-link-hover": "var(--global-colors-minsk)"
+					}
+				}
+			],
+			"seance": [
+				{
+					"variable": {
+						"button-color": "var(--global-colors-white)",
+						"button-color-hover": "var(--global-colors-white)",
+						"button-background-color": "var(--global-colors-seance)",
+						"button-background-color-hover": "var(--global-colors-seance-opaque)",
+						"button-color-is-link": "var(--global-colors-seance)",
+						"button-color-is-link-hover": "var(--global-colors-seance)"
 					}
 				}
 			]
