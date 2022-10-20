@@ -17,6 +17,7 @@ export const HeadingOptions = (attributes) => {
 		showLabel = false,
 		showHeadingColor = true,
 		showHeadingSize = true,
+		showHeadingWeight = true
 	} = attributes;
 
 	if (!headingShowControls) {
@@ -26,6 +27,7 @@ export const HeadingOptions = (attributes) => {
 	const headingUse = checkAttr('headingUse', attributes, manifest);
 	const headingColor = checkAttr('headingColor', attributes, manifest);
 	const headingSize = checkAttr('headingSize', attributes, manifest);
+	const headingWeight = checkAttr('headingWeight', attributes, manifest);
 
 	return (
 		<>
@@ -54,6 +56,18 @@ export const HeadingOptions = (attributes) => {
 							value={headingSize}
 							options={getOption('headingSize', attributes, manifest)}
 							onChange={(value) => setAttributes({ [getAttrKey('headingSize', attributes, manifest)]: value })}
+							simpleValue
+							isClearable={false}
+							isSearchable={false}
+						/>
+					}
+
+					{showHeadingWeight &&
+						<CustomSelect
+							label={<IconLabel icon={icons.textSize} label={__('Font weight', 'infinum-academy')} />}
+							value={headingWeight}
+							options={getOption('headingWeight', attributes, manifest)}
+							onChange={(value) => setAttributes({ [getAttrKey('headingWeight', attributes, manifest)]: value })}
 							simpleValue
 							isClearable={false}
 							isSearchable={false}

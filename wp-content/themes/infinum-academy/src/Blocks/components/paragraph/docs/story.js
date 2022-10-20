@@ -45,6 +45,22 @@ export const size = () => (
 	</Fragment>
 );
 
+export const weight = () => (
+	<Fragment>
+		{manifest.options.paragraphWeight.map((values, index) => (
+			<Fragment key={index}>
+				<ParagraphEditor
+					{...props('paragraph', attributes, {
+						paragraphContent: values.label, 
+						paragraphWeight: values.value, 
+					})}
+				/>
+				<br />
+			</Fragment>
+		))}
+	</Fragment>
+);
+
 export const color = () => (
 	<Fragment>
 		{manifest.options.paragraphColor.map((values, index) => (
