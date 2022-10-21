@@ -17,6 +17,7 @@
 		"customBlocksName": "eightshift-block",
 		"maxCols": 12,
 		"baseFont": "Montserrat",
+		"secondaryFont": "Source Sans Pro",
 		"zIndex": {
 			"header": 100,
 			"drawer": 99,
