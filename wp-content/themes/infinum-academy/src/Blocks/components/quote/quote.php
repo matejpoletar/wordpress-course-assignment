@@ -30,9 +30,14 @@ $quoteClass = Components::classnames([
 ?>
 
 <figure class="<?php echo esc_attr($quoteClass); ?>">
-	<i class="<?php echo esc_attr("{$componentClass}__icon"); ?>">
-		<?php echo $manifest['resources']['icon']; // phpcs:ignore Eightshift.Security.ComponentsEscape.OutputNotEscaped ?>
-	</i>
+	<?php
+	echo Components::render(
+		'image',
+		Components::props('image', $attributes, [
+			'blockClass' => $componentClass
+		])
+	);
+	?>
 
 	<blockquote class="<?php echo esc_attr("{$componentClass}__content"); ?>">
 		<?php
