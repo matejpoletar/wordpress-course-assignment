@@ -33,7 +33,6 @@ export const CardOverlayEditor = (attributes) => {
 	return (
 		<div className={cardClass} data-id={unique}>
 			{outputCssVariables(attributes, manifest, unique, globalManifest)}
-
 			<ImageEditor
 				{...props('image', attributes, {
 					blockClass: componentClass,

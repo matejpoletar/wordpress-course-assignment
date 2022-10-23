@@ -6,7 +6,8 @@
 	"description" : "Card Overlay Description",
 	"example": {
 		"attributes": {
-			"cardOverlayAlign": "left"
+			"cardOverlayAlign": "left",
+			"cardOverlayUrl": "https://infinum-academy.test/"
 		}
 	},
 	"components": {
@@ -18,6 +19,9 @@
 		"cardOverlayAlign": {
 			"type": "string",
 			"default": "left"
+		},
+		"cardOverlayUrl": {
+			"type": "string"
 		}
 	},
 	"options": {
