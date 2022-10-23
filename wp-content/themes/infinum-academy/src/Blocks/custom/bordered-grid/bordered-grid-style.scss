@@ -1,0 +1,18 @@
+// Style for example block on frontend
+.block-bordered-grid {
+	display: flex;
+	flex-direction: column;
+
+	@include media(tablet up) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+	}
+}
+
+.bordered-grid-element {
+	@include media(tablet up) {
+		border: 1px solid black;
+	}
+	padding: 2rem 0.5rem;
+}
