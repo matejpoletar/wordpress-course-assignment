@@ -8,17 +8,50 @@
 
 use InfinumAcademyVendor\EightshiftLibs\Helpers\Components;
 
+$globalManifest = Components::getManifest(dirname(__DIR__, 2));
 $manifest = Components::getManifest(__DIR__);
 
-$componentClass = $attributes['componentClass'] ?? '';
+$componentClass = $manifest['componentClass'] ?? '';
+$additionalClass = $attributes['additionalClass'] ?? '';
+$blockClass = $attributes['blockClass'] ?? '';
+$selectorClass = $attributes['selectorClass'] ?? $componentClass;
 
-$cardOverlayContent = Components::checkAttr('cardOverlayContent', $attributes, $manifest);
+$unique = Components::getUnique();
+
+$cardClass = Components::classnames([
+	Components::selector($componentClass, $componentClass),
+	Components::selector($blockClass, $blockClass, $selectorClass),
+	Components::selector($additionalClass, $additionalClass),
+]);
 
 ?>
 
-<div class="<?php echo esc_attr($componentClass); ?>">
+<div class="<?php echo esc_attr($cardClass); ?>" data-id="<?php echo esc_attr($unique); ?>">
 	<?php
-		// phpcs:ignore Eightshift.Security.ComponentsEscape.OutputNotEscaped
-		echo $cardOverlayContent;
-	?>
+		echo Components::outputCssVariables($attributes, $manifest, $unique, $globalManifest);
+
+		echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'image',
+			Components::props('image', $attributes, [
+				'blockClass' => $componentClass,
+			])
+		)
+		?>
+	<div>
+		<?php
+			echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				'heading',
+				Components::props('heading', $attributes, [
+					'blockClass' => $componentClass
+				])
+			),
+
+			Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				'paragraph',
+				Components::props('paragraph', $attributes, [
+					'blockClass' => $componentClass
+				])
+			)
+			?>
+	</div>
 </div>
