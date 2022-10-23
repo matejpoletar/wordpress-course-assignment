@@ -1,0 +1,9 @@
+.card-overlay {
+	.block-editor-media-placeholder {
+		margin-bottom: 1.5rem !important; // stylelint-disable-line declaration-no-important
+	}
+}
+
+.card-overlay > div {
+	border: 1px solid black;
+}
