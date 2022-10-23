@@ -6,12 +6,38 @@
 	"description" : "Card Overlay Description",
 	"example": {
 		"attributes": {
-			"cardOverlayContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam est id semper aliquet. Aenean accumsan lacus justo, a lacinia turpis semper condimentum."
+			"cardOverlayContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam est id semper aliquet. Aenean accumsan lacus justo, a lacinia turpis semper condimentum.",
+			"cardAlign": "left"
 		}
+	},
+	"components": {
+		"heading": "heading",
+		"paragraph": "paragraph",
+		"image": "image"
 	},
 	"attributes": {
 		"cardOverlayContent": {
 			"type": "string"
+		},
+		"cardAlign": {
+			"type": "string",
+			"default": "left"
 		}
+	},
+	"options": {
+		"cardAlign": [
+			"left",
+			"center",
+			"right"
+		]
+	},
+	"variables": {
+		"cardAlign": [
+			{
+				"variable": {
+					"block-card-align": "%value%"
+				}
+			}
+		]
 	}
 }
