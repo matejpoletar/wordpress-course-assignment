@@ -6,7 +6,6 @@
 	"description" : "Card Overlay Description",
 	"example": {
 		"attributes": {
-			"cardOverlayContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquam est id semper aliquet. Aenean accumsan lacus justo, a lacinia turpis semper condimentum.",
 			"cardAlign": "left"
 		}
 	},
@@ -16,9 +15,6 @@
 		"image": "image"
 	},
 	"attributes": {
-		"cardOverlayContent": {
-			"type": "string"
-		},
 		"cardAlign": {
 			"type": "string",
 			"default": "left"
