@@ -64,7 +64,7 @@ export const HeadingOptions = (attributes) => {
 						/>
 					}
 
-					{headingWeight &&
+					{showHeadingWeight &&
 						<CustomSelect
 							label={<IconLabel icon={icons.textSize} label={__('Text weight', 'infinum-academy')} />}
 							value={headingWeight}
