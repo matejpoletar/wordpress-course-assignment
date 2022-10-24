@@ -8,6 +8,7 @@
 			"headingContent": "This is heading",
 			"headingLevel": 2,
 			"headingSize": "regular",
+			"headingWeight": "normal",
 			"headingColor": "black",
 			"headingUse": true
 		}
@@ -23,6 +24,10 @@
 		"headingSize": {
 			"type": "string",
 			"default": "regular"
+		},
+		"headingWeight": {
+			"type": "string",
+			"default": "normal"
 		},
 		"headingColor": {
 			"type": "string",
@@ -69,6 +74,16 @@
 			"mist",
 			"dew",
 			"eightshift"
+		],
+		"headingWeight": [
+			{
+				"label": "Normal",
+				"value": "normal" 
+			},
+			{
+				"label": "Bold",
+				"value": "bold" 
+			}
 		]
 	},
 	"variables": {
@@ -134,6 +149,22 @@
 					"breakpoint": "tablet",
 					"variable": {
 						"heading-font-size": "4.25rem"
+					}
+				}
+			]
+		},
+		"headingWeight": {
+			"normal": [
+				{
+					"variable": {
+						"heading-font-weight": "normal"
+					}
+				}
+			],
+			"bold": [
+				{
+					"variable": {
+						"heading-font-weight": "bold"
 					}
 				}
 			]

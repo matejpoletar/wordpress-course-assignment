@@ -7,6 +7,7 @@
 		"attributes": {
 			"paragraphContent": "This is paragraph",
 			"paragraphSize": "regular",
+			"paragraphWeight": "normal",
 			"paragraphColor": "black",
 			"paragraphUse": true
 		}
@@ -26,6 +27,10 @@
 		"paragraphUse": {
 			"type": "boolean",
 			"default": true
+		},
+		"paragraphWeight": {
+			"type": "string",
+			"default": "normal"
 		}
 	},
 	"options": {
@@ -64,6 +69,16 @@
 			"mist",
 			"dew",
 			"eightshift"
+		],
+		"paragraphWeight": [
+			{
+				"label": "Normal",
+				"value": "normal" 
+			},
+			{
+				"label": "Bold",
+				"value": "bold" 
+			}
 		]
 	},
 	"variables": {
@@ -239,6 +254,22 @@
 						"paragraph-color": "var(--global-colors-mist)",
 						"paragraph-link-color": "var(--global-colors-ocean)",
 						"paragraph-link-color-hover": "var(--global-colors-green)"
+					}
+				}
+			]
+		},
+		"paragraphWeight": {
+			"normal": [
+				{
+					"variable": {
+						"paragraph-font-weight": "normal"
+					}
+				}
+			],
+			"bold": [
+				{
+					"variable": {
+						"paragraph-font-weight": "bold"
 					}
 				}
 			]
