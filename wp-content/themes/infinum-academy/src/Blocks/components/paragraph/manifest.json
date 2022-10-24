@@ -225,7 +225,6 @@
 				}
 			]
 		},
-<<<<<<< HEAD
 		"paragraphWeight": {
 			"normal": [
 				{
@@ -238,7 +237,10 @@
 				{
 					"variable": {
 						"paragraph-font-weight": "bold"
-=======
+					}
+				}
+			]
+		},
 		"paragraphFont": {
 			"montserrat": [
 				{
@@ -251,7 +253,6 @@
 				{
 					"variable": {
 						"paragraph-font-family": "var(--global-secondary-font)"
->>>>>>> 6a78282 (Add secondary font in paragraph and heading components)
 					}
 				}
 			]
