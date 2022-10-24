@@ -8,11 +8,30 @@
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 	}
+
+	&__heading {
+		margin-bottom: 2.25rem;
+	}
 }
 
 .bordered-grid-element {
+	padding: 2rem;
+}
+
+.bordered-grid-element:nth-child(odd) {
 	@include media(tablet up) {
-		border: 1px solid black;
+		border-right: 1px solid lightgray;
 	}
-	padding: 2rem 0.5rem;
+}
+
+.bordered-grid-element:nth-child(1) {
+	@include media(tablet up) {
+		border-bottom: 1px solid lightgray;
+	}
+}
+
+.bordered-grid-element:nth-child(2) {
+	@include media(tablet up) {
+		border-bottom: 1px solid lightgray;
+	}
 }
