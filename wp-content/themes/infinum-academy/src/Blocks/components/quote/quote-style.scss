@@ -1,9 +1,14 @@
 .quote {
 	margin: 0;
 
-	&__icon {
-		display: block;
-		margin-bottom: 1rem;
+	&__image {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+	}
+
+	&__image > img {
+		overflow: hidden;
 	}
 
 	&__content {

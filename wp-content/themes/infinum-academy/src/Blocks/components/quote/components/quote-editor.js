@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import { checkAttr, props, selector } from '@eightshift/frontend-libs/scripts';
 import { ParagraphEditor } from '../../paragraph/components/paragraph-editor';
+import { ImageEditor } from '../../image/components/image-editor';
 import manifest from './../manifest.json';
 
 export const QuoteEditor = (attributes) => {
@@ -13,10 +14,7 @@ export const QuoteEditor = (attributes) => {
 	}
 
 	const {
-		componentClass,
-		resources: {
-			icon
-		},
+		componentClass
 	} = manifest;
 
 	const {
@@ -31,7 +29,6 @@ export const QuoteEditor = (attributes) => {
 		selector(additionalClass, additionalClass),
 	]);
 
-	const quoteIconClass = selector(componentClass, componentClass, 'icon');
 	const quoteContentClass = selector(componentClass, componentClass, 'content');
 	const quoteSeparator = selector(componentClass, componentClass, 'separator');
 	const quoteCaptionClass = selector(componentClass, componentClass, 'caption');
@@ -39,11 +36,12 @@ export const QuoteEditor = (attributes) => {
 	return (
 		<>
 			<figure className={quoteClass}>
-				<i
-					className={quoteIconClass}
-					dangerouslySetInnerHTML={{ __html: icon }}
-				></i>
-
+				<ImageEditor 
+					{...props('image', attributes, {
+						blockClass: componentClass,
+					})}
+				/>
+				
 				<blockquote className={quoteContentClass}>
 					<ParagraphEditor
 						{...props('quote', attributes, {

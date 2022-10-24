@@ -2,6 +2,8 @@ import React from 'react';
 import { __ } from '@wordpress/i18n';
 import { props, getOptions, checkAttr, getAttrKey, ComponentUseToggle } from '@eightshift/frontend-libs/scripts';
 import { ParagraphOptions } from '../../paragraph/components/paragraph-options';
+import { ImageOptions } from '../../../components/image/components/image-options';
+
 import manifest from './../manifest.json';
 
 export const QuoteOptions = (attributes) => {
@@ -36,6 +38,11 @@ export const QuoteOptions = (attributes) => {
 
 			{quoteUse &&
 				<>
+					<ImageOptions
+						{...props('image', attributes, {
+							setAttributes,
+						})}
+					/>
 					<ParagraphOptions
 						label={__('Quote', 'infinum-academy')}
 						showLabel={true}
