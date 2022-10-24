@@ -18,6 +18,10 @@
 		"cardAlign": {
 			"type": "string",
 			"default": "left"
+		},
+		"innerContainerClass": {
+			"type": "string",
+			"default": "card-overlay-container"
 		}
 	},
 	"options": {

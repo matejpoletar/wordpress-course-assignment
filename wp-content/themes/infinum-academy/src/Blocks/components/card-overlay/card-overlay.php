@@ -12,7 +12,6 @@ $globalManifest = Components::getManifest(dirname(__DIR__, 2));
 $manifest = Components::getManifest(__DIR__);
 
 $componentClass = $manifest['componentClass'] ?? '';
-$additionalClass = $attributes['additionalClass'] ?? '';
 $blockClass = $attributes['blockClass'] ?? '';
 $selectorClass = $attributes['selectorClass'] ?? $componentClass;
 
@@ -21,8 +20,9 @@ $unique = Components::getUnique();
 $cardClass = Components::classnames([
 	Components::selector($componentClass, $componentClass),
 	Components::selector($blockClass, $blockClass, $selectorClass),
-	Components::selector($additionalClass, $additionalClass),
 ]);
+
+$innerContainerClass = Components::checkAttr('innerContainerClass', $attributes, $manifest);
 
 ?>
 
@@ -37,7 +37,7 @@ $cardClass = Components::classnames([
 			])
 		)
 		?>
-	<div>
+	<div class="<?php echo esc_attr($innerContainerClass); ?>">
 		<?php
 			echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				'heading',
