@@ -15,8 +15,6 @@ $componentClass = $manifest['componentClass'] ?? '';
 $blockClass = $attributes['blockClass'] ?? '';
 $selectorClass = $attributes['selectorClass'] ?? $componentClass;
 
-$cardUrl = Components::checkAttr('cardUrl', $attributes, $manifest);
-
 $unique = Components::getUnique();
 
 $cardClass = Components::classnames([
@@ -27,36 +25,48 @@ $cardClass = Components::classnames([
 $innerContainerClass = Components::classnames([
 	Components::selector($componentClass, $componentClass, "container")
 ]);
+
+$cardOverlayUrl = Components::checkAttr('cardOverlayUrl', $attributes, $manifest);
 ?>
 
-<a href="<?php echo esc_attr($cardUrl); ?>">
-	<div class="<?php echo esc_attr($cardClass); ?>" data-id="<?php echo esc_attr($unique); ?>">
+<div class="<?php echo esc_attr($cardClass); ?>" data-id="<?php echo esc_attr($unique); ?>">
+<?php
+if ($cardOverlayUrl) {
+	?> 
+	<a href="<?php echo esc_attr($cardOverlayUrl); ?>"> 
+	<?php
+}
+?>
+	<?php
+		echo Components::outputCssVariables($attributes, $manifest, $unique, $globalManifest);
+
+		echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'image',
+			Components::props('image', $attributes, [
+				'blockClass' => $componentClass,
+			])
+		);
+		?>
+	<div class="<?php echo esc_attr($innerContainerClass); ?>">
 		<?php
-			echo Components::outputCssVariables($attributes, $manifest, $unique, $globalManifest);
-
 			echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				'image',
-				Components::props('image', $attributes, [
-					'blockClass' => $componentClass,
+				'heading',
+				Components::props('heading', $attributes, [
+					'blockClass' => $componentClass
 				])
-			);
-			?>
-		<div class="<?php echo esc_attr($componentClass . "-div"); ?>">
-			<?php
-				echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'heading',
-					Components::props('heading', $attributes, [
-						'blockClass' => $componentClass
-					])
-				),
+			),
 
-				Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'paragraph',
-					Components::props('paragraph', $attributes, [
-						'blockClass' => $componentClass
-					])
-				)
-				?>
-		</div>
+			Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				'paragraph',
+				Components::props('paragraph', $attributes, [
+					'blockClass' => $componentClass
+				])
+			)
+			?>
 	</div>
-</a>
+<?php
+if ($cardOverlayUrl) {
+	?></a><?php
+}
+?>
+</div>

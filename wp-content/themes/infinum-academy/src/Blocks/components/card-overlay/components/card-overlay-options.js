@@ -16,7 +16,7 @@ export const CardOverlayOptions = (attributes) => {
 		label = manifestTitle
 	} = attributes;
 
-	const cardUrl = checkAttr('cardUrl', attributes, manifest);
+	const cardOverlayUrl = checkAttr('cardOverlayUrl', attributes, manifest);
 
 	return (
 		<>
@@ -27,12 +27,10 @@ export const CardOverlayOptions = (attributes) => {
 			/>
 
 			<LinkEditComponent 
-				url={cardUrl} 
+				url={cardOverlayUrl} 
 				setAttributes={setAttributes}
-				anchorRef={cardUrl}
 				title={label} 
-				onChange={(value) => setAttributes({ [getAttrKey('cardUrl', attributes, manifest)]: value })}
-				urlAttrName={getAttrKey('cardUrl', attributes, manifest)} 
+				urlAttrName={getAttrKey('cardOverlayUrl', attributes, manifest)} 
 			/>
 
 			<HeadingOptions
