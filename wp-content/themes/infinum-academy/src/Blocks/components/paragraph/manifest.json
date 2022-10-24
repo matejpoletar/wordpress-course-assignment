@@ -9,6 +9,7 @@
 			"paragraphSize": "regular",
 			"paragraphWeight": "normal",
 			"paragraphColor": "black",
+			"paragraphFont": "Montserrat",
 			"paragraphUse": true
 		}
 	},
@@ -23,6 +24,10 @@
 		"paragraphColor": {
 			"type": "string",
 			"default": "black"
+		},
+		"paragraphFont": {
+			"type": "string",
+			"default": "Montserrat"
 		},
 		"paragraphUse": {
 			"type": "boolean",
@@ -66,6 +71,16 @@
 			{
 				"label": "Bold",
 				"value": "bold" 
+			}
+		],
+		"paragraphFont": [
+			{
+				"label": "Montserrat",
+				"value": "montserrat"
+			},
+			{
+				"label": "Source Sans Pro",
+				"value": "source_sans_pro"
 			}
 		]
 	},
@@ -210,6 +225,7 @@
 				}
 			]
 		},
+<<<<<<< HEAD
 		"paragraphWeight": {
 			"normal": [
 				{
@@ -222,6 +238,20 @@
 				{
 					"variable": {
 						"paragraph-font-weight": "bold"
+=======
+		"paragraphFont": {
+			"montserrat": [
+				{
+					"variable": {
+						"paragraph-font-family": "var(--global-base-font)"
+					}
+				}
+			],
+			"source_sans_pro": [
+				{
+					"variable": {
+						"paragraph-font-family": "var(--global-secondary-font)"
+>>>>>>> 6a78282 (Add secondary font in paragraph and heading components)
 					}
 				}
 			]

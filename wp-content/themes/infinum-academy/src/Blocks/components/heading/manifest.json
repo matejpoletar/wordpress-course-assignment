@@ -10,6 +10,7 @@
 			"headingSize": "regular",
 			"headingWeight": "normal",
 			"headingColor": "black",
+			"headingFont": "montserrat",
 			"headingUse": true
 		}
 	},
@@ -32,6 +33,10 @@
 		"headingColor": {
 			"type": "string",
 			"default": "black"
+		},
+		"headingFont": {
+			"type": "string",
+			"default": "montserrat"
 		},
 		"headingUse": {
 			"type": "boolean",
@@ -87,6 +92,16 @@
 			{
 				"label": "Bold",
 				"value": "bold" 
+			}
+		],
+		"headingFont": [
+			{
+				"label": "Montserrat",
+				"value": "montserrat"
+			},
+			{
+				"label": "Source Sans Pro",
+				"value": "source_sans_pro"
 			}
 		]
 	},
@@ -199,6 +214,22 @@
 					"heading-color": "var(--global-colors-%value%)"
 				}
 			}
-		]
+		],
+		"headingFont": {
+			"montserrat": [
+				{
+					"variable": {
+						"heading-font-family": "var(--global-base-font)"
+					}
+				}
+			],
+			"source_sans_pro": [
+				{
+					"variable": {
+						"heading-font-family": "var(--global-secondary-font)"
+					}
+				}
+			]
+		}
 	}
 }

@@ -1,0 +1,9 @@
+// Fonts.
+@include font-face(global-settings(baseFont), 'montserrat-400', 400, normal, woff2);
+@include font-face(global-settings(baseFont), 'montserrat-600', 600, normal, woff2);
+@include font-face(global-settings(baseFont), 'montserrat-700', 700, normal, woff2);
+@include font-face(global-settings(baseFont), 'montserrat-400-italic', 400, italic, woff2);
+@include font-face(global-settings(secondaryFont), 'source-sans-pro-400', 400, normal, woff2);
+@include font-face(global-settings(secondaryFont), 'source-sans-pro-400-italic', 400, italic, woff2);
+@include font-face(global-settings(secondaryFont), 'source-sans-pro-600', 600, normal, woff2);
+@include font-face(global-settings(secondaryFont), 'source-sans-pro-700', 700, normal, woff2);

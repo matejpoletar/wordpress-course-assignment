@@ -17,7 +17,8 @@ export const ParagraphOptions = (attributes) => {
 		showLabel = false,
 		showParagraphColor = true,
 		showParagraphSize = true,
-		showParagraphWeight = true
+		showParagraphWeight = true,
+		showParagraphFont = true
 	} = attributes;
 
 	if (!paragraphShowControls) {
@@ -28,6 +29,7 @@ export const ParagraphOptions = (attributes) => {
 	const paragraphColor = checkAttr('paragraphColor', attributes, manifest);
 	const paragraphSize = checkAttr('paragraphSize', attributes, manifest);
 	const paragraphWeight = checkAttr('paragraphWeight', attributes, manifest);
+	const paragraphFont = checkAttr('paragraphFont', attributes, manifest);
 
 	return (
 		<>
@@ -70,12 +72,21 @@ export const ParagraphOptions = (attributes) => {
 							onChange={(value) => setAttributes({ [getAttrKey('paragraphWeight', attributes, manifest)]: value })}
 							isClearable={false}
 							isSearchable={false}
+							simpleValue />
+					}
+
+					{showParagraphFont &&
+						<CustomSelect
+							label={<IconLabel icon={icons.textSize} label={__('Font family', 'infinum-academy')} />}
+							value={paragraphFont}
+							options={getOption('paragraphFont', attributes, manifest)}
+							onChange={(value) => setAttributes({ [getAttrKey('paragraphFont', attributes, manifest)]: value })}
 							simpleValue
-						/>
+							isClearable={false}
+							isSearchable={false} />
 					}
 				</>
 			}
-
 		</>
 	);
 };
