@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/infinum/eightshift-frontend-libs/develop/schemas/component.json",
+	"componentName": "card-overlay",
+	"title": "Card Overlay",
+	"componentClass": "card-overlay",
+	"description" : "Card Overlay Description",
+	"example": {
+		"attributes": {
+			"cardOverlayAlign": "left"
+		}
+	},
+	"components": {
+		"heading": "heading",
+		"paragraph": "paragraph",
+		"image": "image"
+	},
+	"attributes": {
+		"cardOverlayAlign": {
+			"type": "string",
+			"default": "left"
+		}
+	},
+	"options": {
+		"cardOverlayAlign": [
+			"left",
+			"center",
+			"right"
+		]
+	},
+	"variables": {
+		"cardOverlayAlign": [
+			{
+				"variable": {
+					"block-card-align": "%value%"
+				}
+			}
+		]
+	}
+}
