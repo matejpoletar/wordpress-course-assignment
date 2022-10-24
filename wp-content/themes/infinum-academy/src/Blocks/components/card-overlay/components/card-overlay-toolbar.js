@@ -13,7 +13,7 @@ export const CardOverlayToolbar = (attributes) => {
 		setAttributes,
 	} = attributes;
 
-	const cardAlign = checkAttr('cardAlign', attributes, manifest);
+	const cardOverlayAlign = checkAttr('cardOverlayAlign', attributes, manifest);
 
 	return (
 		<>
@@ -24,10 +24,10 @@ export const CardOverlayToolbar = (attributes) => {
 			/>
 
 			<AlignmentToolbar
-				value={cardAlign}
-				options={getOption('cardAlign', attributes, manifest)}
+				value={cardOverlayAlign}
+				options={getOption('cardOverlayAlign', attributes, manifest)}
 				label={sprintf(__('%s content align', 'infinum-academy'), manifestTitle)}
-				onChange={(value) => setAttributes({ [getAttrKey('cardAlign', attributes, manifest)]: value })}
+				onChange={(value) => setAttributes({ [getAttrKey('cardOverlayAlign', attributes, manifest)]: value })}
 				type={AlignmentToolbarType.HORIZONTAL}
 			/>
 		</>

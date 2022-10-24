@@ -22,8 +22,9 @@ $cardClass = Components::classnames([
 	Components::selector($blockClass, $blockClass, $selectorClass),
 ]);
 
-$innerContainerClass = Components::checkAttr('innerContainerClass', $attributes, $manifest);
-
+$innerContainerClass = Components::classnames([
+	Components::selector($componentClass, $componentClass, "container")
+]);
 ?>
 
 <div class="<?php echo esc_attr($cardClass); ?>" data-id="<?php echo esc_attr($unique); ?>">

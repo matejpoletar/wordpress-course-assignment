@@ -6,7 +6,7 @@
 	"description" : "Card Overlay Description",
 	"example": {
 		"attributes": {
-			"cardAlign": "left"
+			"cardOverlayAlign": "left"
 		}
 	},
 	"components": {
@@ -15,24 +15,20 @@
 		"image": "image"
 	},
 	"attributes": {
-		"cardAlign": {
+		"cardOverlayAlign": {
 			"type": "string",
 			"default": "left"
-		},
-		"innerContainerClass": {
-			"type": "string",
-			"default": "card-overlay-container"
 		}
 	},
 	"options": {
-		"cardAlign": [
+		"cardOverlayAlign": [
 			"left",
 			"center",
 			"right"
 		]
 	},
 	"variables": {
-		"cardAlign": [
+		"cardOverlayAlign": [
 			{
 				"variable": {
 					"block-card-align": "%value%"

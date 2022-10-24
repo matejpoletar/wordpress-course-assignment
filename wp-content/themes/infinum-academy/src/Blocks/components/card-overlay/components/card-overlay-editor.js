@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import classnames from 'classnames';
-import { outputCssVariables, getUnique, checkAttr, props, selector } from '@eightshift/frontend-libs/scripts';
+import { outputCssVariables, getUnique, props, selector } from '@eightshift/frontend-libs/scripts';
 import { ImageEditor } from '../../image/components/image-editor';
 import { HeadingEditor } from '../../heading/components/heading-editor';
 import { ParagraphEditor } from '../../paragraph/components/paragraph-editor';
@@ -26,7 +26,9 @@ export const CardOverlayEditor = (attributes) => {
 		selector(additionalClass, additionalClass),
 	]);
 
-	const innerContainerClass = checkAttr('innerContainerClass', attributes, manifest);
+	const innerContainerClass = classnames([
+		selector(componentClass, componentClass, "container")
+	]);
 
 	return (
 		<div className={cardClass} data-id={unique}>
@@ -38,17 +40,17 @@ export const CardOverlayEditor = (attributes) => {
 				})}
 			/>
 			<div className={innerContainerClass}>
-			<HeadingEditor
-				{...props('heading', attributes, {
-					blockClass: componentClass,
-				})}
-			/>
+				<HeadingEditor
+					{...props('heading', attributes, {
+						blockClass: componentClass,
+					})}
+				/>
 
-			<ParagraphEditor
-				{...props('paragraph', attributes, {
-					blockClass: componentClass,
-				})}
-			/>
+				<ParagraphEditor
+					{...props('paragraph', attributes, {
+						blockClass: componentClass,
+					})}
+				/>
 			</div>
 		</div>
 	);
