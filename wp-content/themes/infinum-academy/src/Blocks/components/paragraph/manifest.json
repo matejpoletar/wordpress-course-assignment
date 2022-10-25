@@ -51,17 +51,11 @@
 		],
 		"paragraphColor": [
 			"primary",
-			"black",
 			"white",
-			"green",
-			"ocean",
-			"yellow",
-			"blue",
-			"red",
-			"cream",
-			"mist",
-			"dew",
-			"eightshift"
+			"grey",
+			"illusion",
+			"minsk",
+			"seance"
 		],
 		"paragraphWeight": [
 			{
@@ -120,71 +114,8 @@
 				{
 					"variable": {
 						"paragraph-color": "var(--global-colors-primary)",
-						"paragraph-link-color": "var(--global-colors-black)",
-						"paragraph-link-color-hover": "var(--global-colors-blue)"
-					}
-				}
-			],
-			"black": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-black)",
-						"paragraph-link-color": "var(--global-colors-primary)",
-						"paragraph-link-color-hover": "var(--global-colors-blue)"
-					}
-				}
-			],
-			"green": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-green)",
-						"paragraph-link-color": "var(--global-colors-white)",
-						"paragraph-link-color-hover": "var(--global-colors-ocean)"
-					}
-				}
-			],
-			"ocean": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-ocean)",
-						"paragraph-link-color": "var(--global-colors-white)",
-						"paragraph-link-color-hover": "var(--global-colors-green)"
-					}
-				}
-			],
-			"yellow": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-yellow)",
-						"paragraph-link-color": "var(--global-colors-white)",
-						"paragraph-link-color-hover": "var(--global-colors-ocean)"
-					}
-				}
-			],
-			"blue": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-blue)",
-						"paragraph-link-color": "var(--global-colors-black)",
-						"paragraph-link-color-hover": "var(--global-colors-primary)"
-					}
-				}
-			],
-			"red": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-red)",
-						"paragraph-link-color": "var(--global-colors-black)",
-						"paragraph-link-color-hover": "var(--global-colors-blue)"
-					}
-				}
-			],
-			"cream": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-cream)",
-						"paragraph-link-color": "var(--global-colors-yellow)",
-						"paragraph-link-color-hover": "var(--global-colors-ocean)"
+						"paragraph-link-color": "var(--global-colors-illusion)",
+						"paragraph-link-color-hover": "var(--global-colors-minsk)"
 					}
 				}
 			],
@@ -192,40 +123,48 @@
 				{
 					"variable": {
 						"paragraph-color": "var(--global-colors-white)",
-						"paragraph-link-color": "var(--global-colors-yellow)",
-						"paragraph-link-color-hover": "var(--global-colors-ocean)"
+						"paragraph-link-color": "var(--global-colors-illusion)",
+						"paragraph-link-color-hover": "var(--global-colors-seance)"
 					}
 				}
 			],
-			"eightshift": [
+			"grey": [
 				{
 					"variable": {
-						"paragraph-color": "var(--global-colors-eightshift)",
-						"paragraph-link-color": "var(--global-colors-blue)",
+						"paragraph-color": "var(--global-colors-grey)",
+						"paragraph-link-color": "var(--global-colors-illusion)",
+						"paragraph-link-color-hover": "var(--global-colors-seance)"
+					}
+				}
+			],
+			"illusion": [
+				{
+					"variable": {
+						"paragraph-color": "var(--global-colors-illusion)",
+						"paragraph-link-color": "var(--global-colors-primary)",
+						"paragraph-link-color-hover": "var(--global-colors-seance)"
+					}
+				}
+			],
+			"minsk": [
+				{
+					"variable": {
+						"paragraph-color": "var(--global-colors-minsk)",
+						"paragraph-link-color": "var(--global-colors-seance)",
 						"paragraph-link-color-hover": "var(--global-colors-primary)"
 					}
 				}
 			],
-			"dew": [
+			"seance": [
 				{
 					"variable": {
-						"paragraph-color": "var(--global-colors-dew)",
-						"paragraph-link-color": "var(--global-colors-ocean)",
-						"paragraph-link-color-hover": "var(--global-colors-white)"
-					}
-				}
-			],
-			"mist": [
-				{
-					"variable": {
-						"paragraph-color": "var(--global-colors-mist)",
-						"paragraph-link-color": "var(--global-colors-ocean)",
-						"paragraph-link-color-hover": "var(--global-colors-green)"
+						"paragraph-color": "var(--global-colors-seance)",
+						"paragraph-link-color": "var(--global-colors-illusion)",
+						"paragraph-link-color-hover": "var(--global-colors-grey)"
 					}
 				}
 			]
 		},
-<<<<<<< HEAD
 		"paragraphWeight": {
 			"normal": [
 				{
@@ -238,7 +177,10 @@
 				{
 					"variable": {
 						"paragraph-font-weight": "bold"
-=======
+					}
+				}
+			]
+		},
 		"paragraphFont": {
 			"montserrat": [
 				{
@@ -251,7 +193,6 @@
 				{
 					"variable": {
 						"paragraph-font-family": "var(--global-secondary-font)"
->>>>>>> 6a78282 (Add secondary font in paragraph and heading components)
 					}
 				}
 			]

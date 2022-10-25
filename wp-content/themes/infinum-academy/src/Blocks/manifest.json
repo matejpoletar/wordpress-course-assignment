@@ -51,7 +51,47 @@
 			{
 				"name": "Primary",
 				"slug": "primary",
-				"color": "#6200EA"
+				"color": "#0D3636"
+			},
+			{
+				"name": "White",
+				"slug": "white",
+				"color": "#FFFFFF"
+			},
+			{
+				"name": "Grey",
+				"slug": "grey",
+				"color": "#F7F7F7"
+			},
+			{
+				"name": "Red",
+				"slug": "illusion",
+				"color": "#E84E4E"
+			},
+			{
+				"name": "Red Opaque",
+				"slug": "illusion-opaque",
+				"color": "#E84E4ECC"
+			},
+			{
+				"name": "Blue",
+				"slug": "minsk",
+				"color": "#44AEDE"
+			},
+			{
+				"name": "Blue Opaque",
+				"slug": "minsk-opaque",
+				"color": "#44AEDECC"
+			},
+			{
+				"name": "Purple",
+				"slug": "seance",
+				"color": "#9973E3"
+			},
+			{
+				"name": "Purple Opaque",
+				"slug": "seance-opaque",
+				"color": "#9973E3CC"
 			},
 			{
 				"name": "Black",
@@ -64,11 +104,6 @@
 				"color": "#CCCCCC"
 			},
 			{
-				"name": "White",
-				"slug": "white",
-				"color": "#FFFFFF"
-			},
-			{
 				"name": "Ocean",
 				"slug": "ocean",
 				"color": "#00B8D4"
@@ -79,19 +114,9 @@
 				"color": "#00E676"
 			},
 			{
-				"name": "Red",
-				"slug": "red",
-				"color": "#B30024"
-			},
-			{
 				"name": "Yellow",
 				"slug": "yellow",
 				"color": "#FFEA00"
-			},
-			{
-				"name": "Blue",
-				"slug": "blue",
-				"color": "#0040F0"
 			},
 			{
 				"name": "Mist",
