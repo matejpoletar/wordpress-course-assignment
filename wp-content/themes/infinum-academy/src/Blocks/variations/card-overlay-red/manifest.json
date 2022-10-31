@@ -1,0 +1,14 @@
+{
+	"$schema": "https://raw.githubusercontent.com/infinum/eightshift-frontend-libs/develop/schemas/variation.json",
+	"parentName": "card-overlay",
+	"name": "card-overlay-red-text",
+	"title": "Card overlay variation with red text",
+	"description" : "Card overlay variation with red text.",
+	"attributes": {
+		"cardOverlayCardOverlayHeadingColor": "illusion",
+		"cardOverlayCardOverlayParagraphColor": "illusion"
+	},
+	"scope": [
+		"inserter"
+	]
+}
