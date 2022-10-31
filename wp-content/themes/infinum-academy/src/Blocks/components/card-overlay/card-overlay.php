@@ -25,9 +25,18 @@ $cardClass = Components::classnames([
 $innerContainerClass = Components::classnames([
 	Components::selector($componentClass, $componentClass, "container")
 ]);
+
+$cardOverlayUrl = Components::checkAttr('cardOverlayUrl', $attributes, $manifest);
 ?>
 
 <div class="<?php echo esc_attr($cardClass); ?>" data-id="<?php echo esc_attr($unique); ?>">
+<?php
+if ($cardOverlayUrl) {
+	?> 
+	<a href="<?php echo esc_attr($cardOverlayUrl); ?>"> 
+	<?php
+}
+?>
 	<?php
 		echo Components::outputCssVariables($attributes, $manifest, $unique, $globalManifest);
 
@@ -36,7 +45,7 @@ $innerContainerClass = Components::classnames([
 			Components::props('image', $attributes, [
 				'blockClass' => $componentClass,
 			])
-		)
+		);
 		?>
 	<div class="<?php echo esc_attr($innerContainerClass); ?>">
 		<?php
@@ -55,4 +64,9 @@ $innerContainerClass = Components::classnames([
 			)
 			?>
 	</div>
+<?php
+if ($cardOverlayUrl) {
+	?></a><?php
+}
+?>
 </div>

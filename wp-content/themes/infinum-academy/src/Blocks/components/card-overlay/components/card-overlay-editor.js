@@ -17,13 +17,11 @@ export const CardOverlayEditor = (attributes) => {
 	const {
 		selectorClass = componentClass,
 		blockClass,
-		additionalClass,
 	} = attributes;
 
 	const cardClass = classnames([
 		selector(componentClass, componentClass),
-		selector(blockClass, blockClass, selectorClass),
-		selector(additionalClass, additionalClass),
+		selector(blockClass, blockClass, selectorClass)
 	]);
 
 	const innerContainerClass = classnames([
@@ -33,7 +31,6 @@ export const CardOverlayEditor = (attributes) => {
 	return (
 		<div className={cardClass} data-id={unique}>
 			{outputCssVariables(attributes, manifest, unique, globalManifest)}
-
 			<ImageEditor
 				{...props('image', attributes, {
 					blockClass: componentClass,
