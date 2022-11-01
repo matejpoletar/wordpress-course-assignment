@@ -1,8 +1,10 @@
 .share {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 1rem;
-	border-top: 1px solid var(--global-colors-light);
+	font-weight: bold;
+	height: 15rem;
 
 	&__item {
 		@extend %link-reset;

@@ -40,11 +40,10 @@ $shareItemClass = Components::classnames([
 	Components::selector($componentJsClass, $componentJsClass),
 ]);
 
-$networkNames = array_column($manifest['socialOptions'], 'label', 'value'); // @phpstan-ignore-line
+$networkNames = array_column($manifest['socialOptions'], 'label', 'value');
 ?>
 <div class="<?php echo esc_attr($shareClass); ?>">
-	<span><?php echo esc_html__('Share on', 'infinum-academy'); ?></span>
-
+	<span><?php echo esc_html__('SHARE ARTICLE', 'infinum-academy'); ?></span>
 	<?php
 	foreach ($socialNetworks as $name => $url) {
 		?>
