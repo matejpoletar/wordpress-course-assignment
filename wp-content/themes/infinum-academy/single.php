@@ -85,11 +85,8 @@ if (have_posts()) {
 				],
 				'layoutSingleSidebar' => [
 					Components::render(
-						'paragraph',
-						[
-							'paragraphContent' => "SHARE ARTICLE",
-							'paragraphWeight' => 'bold'
-						],
+						'share',
+						[],
 						'',
 						true
 					),
