@@ -7,6 +7,7 @@
  */
 
 use InfinumAcademyVendor\EightshiftLibs\Helpers\Components;
+use InfinumAcademy\Menu\Menu;
 
 ?>
 
@@ -19,17 +20,17 @@ echo Components::render(
 		'layoutThreeColumnsAriaRole' => 'contentinfo',
 		'additionalClass' => 'footer',
 		'layoutThreeColumnsLeft' => Components::render(
-			'copyright',
+			'menu',
 			[
-				'copyrightBy' => esc_html__('Eightshift', 'infinum-academy'),
-				'copyrightYear' => gmdate('Y'),
-				'copyrightContent' => esc_html__('Made with 🧡  by Team Eightshift', 'infinum-academy'),
+				'variation' => 'horizontal',
+				'menu' => Menu::FOOTER_MENU,
 			]
 		),
 		'layoutThreeColumnsRight' => Components::render(
-			'menu',
+			'copyright',
 			[
-				'variation' => 'horizontal'
+				'copyrightYear' => gmdate('Y'),
+				'copyrightContent' => esc_html__('All love and happiness', 'infinum-academy'),
 			]
 		),
 	]
