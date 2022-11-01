@@ -1,0 +1,30 @@
+{
+	"componentName": "layout-single",
+	"title": "Layout single",
+	"componentClass": "layout-single",
+	"example": {
+		"attributes": {
+			"layoutSingleTag": "div",
+			"layoutSingleUse": true
+		}
+	},
+	"attributes": {
+		"layoutSingleMeta": {
+			"type": "array"
+		},
+		"layoutSingleSidebar": {
+			"type": "array"
+		},
+		"layoutSingleMain": {
+			"type": "array"
+		},
+		"layoutSingleTag": {
+			"type": "string",
+			"default": "div"
+		},
+		"layoutSingleUse": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}
