@@ -1,0 +1,45 @@
+{
+	"componentName": "layout-archive",
+	"title": "Layout Archive",
+	"componentClass": "layout-archive",
+	"example": {
+		"attributes": {
+			"layoutArchiveRowItems": 3,
+			"layoutArchiveTag": "div",
+			"layoutArchiveUse": true
+		}
+	},
+	"attributes": {
+		"layoutArchiveIntro": {
+			"type": "array"
+		},
+		"layoutArchiveItems": {
+			"type": "array"
+		},
+		"layoutArchiveTag": {
+			"type": "string",
+			"default": "div"
+		},
+		"layoutArchiveRowItems": {
+			"type": "integer",
+			"default": 3
+		},
+		"layoutArchiveLoadMoreId": {
+			"type": "string"
+		},
+		"layoutArchiveUse": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"options": {
+		"layoutArchiveRowItems": {
+			"min": 1,
+			"max": 4,
+			"step": 1
+		}
+	},
+	"variables": {
+		
+	}
+}
