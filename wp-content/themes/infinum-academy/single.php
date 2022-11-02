@@ -22,9 +22,8 @@ if (have_posts()) {
 
 		$categoryDetail = get_the_category($postId);
 		$categoriesContent = '';
-		ob_start();
 		foreach ($categoryDetail as $cd) {
-			echo Components::render(
+			$categoriesContent .= Components::render(
 				'button',
 				[
 					'buttonColor' => 'grey',
@@ -35,7 +34,6 @@ if (have_posts()) {
 				true
 			);
 		}
-		$categoriesContent = ob_get_clean();
 
 		echo Components::render(
 			'layout-single',
