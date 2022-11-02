@@ -6,8 +6,9 @@
 	"description" : "Card overlay variation with red text.",
 	"attributes": {
 		"cardOverlayCardOverlayHeadingColor": "illusion",
-		"cardOverlayCardOverlayParagraphColor": "illusion"
-	},
+		"cardOverlayCardOverlayParagraphColor": "illusion",
+		"cardOverlayCardOverlayPosition": "bottom"
+		},
 	"scope": [
 		"inserter"
 	]
