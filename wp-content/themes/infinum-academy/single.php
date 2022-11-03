@@ -20,14 +20,15 @@ if (have_posts()) {
 		$postAuthor = get_the_author_meta('display_name');
 		$postContent = apply_filters('the_content', get_post_field('post_content', $postId));
 
-		$categoryDetail = get_the_category($postId);
+		$categoryDetails = get_the_category($postId);
 		$categoriesContent = '';
-		foreach ($categoryDetail as $cd) {
+		foreach ($categoryDetails as $categoryDetail) {
 			$categoriesContent .= Components::render(
 				'button',
 				[
 					'buttonColor' => 'grey',
-					'buttonContent' => $cd->name,
+					'buttonContent' => $categoryDetail->name,
+					'buttonUrl' => get_category_link($categoryDetail->cat_ID), // phpcs:ignore Squiz.NamingConventions.ValidVariableName.MemberNotCamelCaps
 					'blockClass' => $blockClass
 				],
 				'',
@@ -70,16 +71,7 @@ if (have_posts()) {
 						'',
 						true
 					),
-					Components::render(
-						'paragraph',
-						[
-							'paragraphContent' => $categoriesContent,
-							'blockClass' => $blockClass,
-							'additionalClass' => "meta-categories"
-						],
-						'',
-						true
-					),
+					$categoriesContent,
 				],
 				'layoutSingleSidebar' => [
 					Components::render(
