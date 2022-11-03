@@ -7,7 +7,8 @@
 	"example": {
 		"attributes": {
 			"cardOverlayAlign": "left",
-			"cardOverlayUrl": "https://infinum-academy.test/"
+			"cardOverlayUrl": "https://infinum-academy.test/",
+			"cardOverlayPosition": "top"
 		}
 	},
 	"components": {
@@ -22,6 +23,10 @@
 		},
 		"cardOverlayUrl": {
 			"type": "string"
+		},
+		"cardOverlayPosition": {
+			"type": "string",
+			"default": "top"
 		}
 	},
 	"options": {
@@ -29,6 +34,10 @@
 			"left",
 			"center",
 			"right"
+		],
+		"cardOverlayPosition": [
+			"top",
+			"bottom"
 		]
 	},
 	"variables": {
@@ -38,6 +47,24 @@
 					"block-card-align": "%value%"
 				}
 			}
-		]
+		],
+		"cardOverlayPosition": {
+			"top": [
+				{
+					"variable": {
+						"card-overlay-top": "0",
+						"card-overlay-bottom": "auto"
+					}
+				}
+			],
+			"bottom": [
+				{
+					"variable": {
+						"card-overlay-top": "auto",
+						"card-overlay-bottom": "0"
+					}
+				}
+			]
+		}
 	}
 }

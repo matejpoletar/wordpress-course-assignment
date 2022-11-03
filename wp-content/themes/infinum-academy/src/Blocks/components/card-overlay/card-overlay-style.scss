@@ -19,12 +19,12 @@
 	&__container {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		padding: 2rem 1.5rem 0;
 		gap: 2rem;
 
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: var(--card-overlay-top);
+		bottom: var(--card-overlay-bottom);
 	}
 }
