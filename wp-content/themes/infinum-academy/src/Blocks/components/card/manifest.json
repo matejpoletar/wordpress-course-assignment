@@ -23,6 +23,13 @@
 		"cardHeadingSize": {
 			"type": "string",
 			"default": "big"
+		},
+		"cardShowButton": {
+			"type": "boolean",
+			"default": true
+		},
+		"cardMetaItems": {
+			"type": "array"
 		}
 	},
 	"options": {

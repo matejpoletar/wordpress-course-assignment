@@ -16,6 +16,9 @@ $additionalClass = $attributes['additionalClass'] ?? '';
 $blockClass = $attributes['blockClass'] ?? '';
 $selectorClass = $attributes['selectorClass'] ?? $componentClass;
 
+$cardShowButton = Components::checkAttr('cardShowButton', $attributes, $manifest);
+$cardMetaItems = Components::checkAttr('cardMetaItems', $attributes, $manifest);
+
 $unique = Components::getUnique();
 
 $cardClass = Components::classnames([
@@ -57,13 +60,24 @@ $cardClass = Components::classnames([
 		Components::props('paragraph', $attributes, [
 			'blockClass' => $componentClass
 		])
-	),
-
-	Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		'button',
-		Components::props('button', $attributes, [
-			'blockClass' => $componentClass
-		])
 	);
+
+	if ($cardShowButton) {
+		echo Components::render( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'button',
+			Components::props('button', $attributes, [
+				'blockClass' => $componentClass
+			])
+		);
+	}
 	?>
+	<div class="<?php echo esc_attr("{$componentClass}__categories"); ?>">
+	<?php foreach ($cardMetaItems as $item) { ?>
+		<div class="<?php echo esc_attr("{$componentClass}__category-item"); ?>">
+			<?php echo esc_attr($item->name); ?>
+		</div>
+		<?php
+	}
+	?>
+	</div>
 </div>
