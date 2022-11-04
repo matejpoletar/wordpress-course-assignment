@@ -119,8 +119,8 @@
 			"grey": [
 				{
 					"variable": {
-						"button-color": "var(--global-colors-primary)",
-						"button-color-hover": "var(--global-colors-primary)",
+						"button-color": "var(--global-colors-white)",
+						"button-color-hover": "var(--global-colors-white)",
 						"button-background-color": "var(--global-colors-grey)",
 						"button-background-color-hover": "var(--global-colors-grey)",
 						"button-color-is-link": "var(--global-colors-grey)",

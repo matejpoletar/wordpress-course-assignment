@@ -1,0 +1,62 @@
+.layout-single {
+	$this: &;
+
+	&__wrap {
+		max-width: var(--global-containers-default);
+		margin: 0 auto;
+
+		display: grid;
+		column-gap: var(--global-gutters-default);
+		row-gap: 3rem;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+			'meta meta meta meta'
+			'sidebar sidebar sidebar sidebar'
+			'main main main main';
+
+		@include media(desktop up) {
+			grid-template-areas:
+				'meta meta meta meta'
+				'main main main sidebar';
+		}
+	}
+
+	&__meta {
+		grid-area: meta;
+	}
+
+	&__heading {
+		padding-bottom: 3rem;
+	}
+
+	&__image {
+		--image-img-max-height: 35rem;
+		--image-img-width: 100%;
+	}
+
+	&__button {
+		margin: 1rem;
+	}
+
+	&__sidebar {
+		grid-area: sidebar;
+		margin-left: 2rem;
+	}
+
+	&__main {
+		grid-area: main;
+		margin-left: 5rem;
+	}
+
+	&__meta > .meta-data {
+		margin: 2rem 1rem 1rem;
+	}
+
+	&__meta > .meta-categories {
+		display: flex;
+	}
+
+	&__btn {
+		margin-left: 1rem;
+	}
+}
