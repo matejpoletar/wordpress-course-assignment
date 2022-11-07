@@ -27,19 +27,20 @@ foreach ($items as $item) {
 			'cardImageUrl' => get_the_post_thumbnail_url($item, 'large'),
 			'blockSsr' => $blockSsr,
 		];
-	}
-	$item = (array) $item;
-	$authors = (array) $item['authors'];
-	$firstAuthor = !empty($authors) ? (array) $authors[0] : [];
-	$formats = (array) $item['formats'];
+	} else {
+		$item = (array) $item;
+		$authors = (array) $item['authors'];
+		$firstAuthor = !empty($authors) ? (array) $authors[0] : [];
+		$formats = (array) $item['formats'];
 
-	$attributes = [
-		'cardHeadingContent' => $item['title'],
-		'cardParagraphContent' => $firstAuthor['name'] ?? '',
-		'cardButtonUse' => false,
-		'cardImageUrl' => $formats['image/jpeg'],
-		'blockSsr' => $blockSsr,
-	];
+		$attributes = [
+			'cardHeadingContent' => $item['title'],
+			'cardParagraphContent' => $firstAuthor['name'] ?? '',
+			'cardButtonUse' => false,
+			'cardImageUrl' => $formats['image/jpeg'],
+			'blockSsr' => $blockSsr,
+		];
+	}
 
 	echo Components::render(
 		'card',

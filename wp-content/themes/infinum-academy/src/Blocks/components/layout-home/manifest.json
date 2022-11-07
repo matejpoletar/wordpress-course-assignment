@@ -1,0 +1,25 @@
+{
+	"componentName": "layout-home",
+	"title": "Layout home",
+	"componentClass": "layout-home",
+	"example": {
+		"attributes": {
+			"layoutHomeUse": true
+		}
+	},
+	"attributes": {
+		"layoutHomeMeta": {
+			"type": "array"
+		},
+		"layoutHomeSidebar": {
+			"type": "array"
+		},
+		"layoutHomeMain": {
+			"type": "array"
+		},
+		"layoutHomeUse": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

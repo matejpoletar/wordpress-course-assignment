@@ -34,16 +34,6 @@ echo Components::render(
 	[
 		'layoutThreeColumnsHtmlTag' => 'nav',
 		'additionalClass' => 'header',
-		'layoutThreeColumnsLeft' => Components::render(
-			'logo',
-			[
-				'parentClass' => 'header',
-				'logoSrc' => apply_filters(Manifest::MANIFEST_ITEM, 'logo.svg'),
-				'logoAlt' => get_bloginfo('name'),
-				'logoTitle' => get_bloginfo('name'),
-				'logoHref' => get_bloginfo('url'),
-			]
-		),
 		'layoutThreeColumnsRight' => [
 			Components::render(
 				'menu',

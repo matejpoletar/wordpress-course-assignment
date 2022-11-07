@@ -1,0 +1,40 @@
+.social-links {
+	$this: &;
+
+	@extend %list-reset;
+
+	display: flex;
+	flex-direction: row;
+	gap: 3rem;
+	align-items: center;
+    margin: 1rem 2rem;
+
+	&__link {
+		@extend %link-reset;
+		color: var(--global-colors-black);
+
+		transition: {
+			property: color;
+			timing-function: ease-out;
+			duration: 0.3s;
+		}
+
+		&:hover {
+			color: var(--global-colors-primary);
+		}
+	}
+
+	&__img {
+		width: 3.5rem;
+		height: auto;
+		opacity: 0.9;
+
+		transition: opacity ease-out 500ms, transform 250ms;
+
+		&:hover {
+			opacity: 1;
+			transform: scale(1.05);
+		}
+	}
+
+}

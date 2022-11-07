@@ -15,11 +15,19 @@ body {
 
 	font-family: var(--global-font-family);
 	color: var(--global-colors-black);
-	background-color: var(--global-colors-white);
 	position: relative;
 	overflow-x: hidden;
 }
 
 a {
 	text-decoration: none;
+}
+
+.reveal-item {
+	opacity: 0;
+	transition: opacity 1.5s ease-out;
+	
+	&--is-visible {
+		opacity: 1;
+	}
 }
