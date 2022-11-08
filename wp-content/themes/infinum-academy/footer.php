@@ -22,11 +22,11 @@ echo Components::render(
 		'layoutThreeColumnsLeft' => Components::render(
 			'social-links',
 			[]
-			), 
+		),
 	]
-	);
+),
 
-echo Components::render(
+Components::render(
 	'layout-three-columns',
 	[
 		'layoutThreeColumnsAriaRole' => 'contentinfo',

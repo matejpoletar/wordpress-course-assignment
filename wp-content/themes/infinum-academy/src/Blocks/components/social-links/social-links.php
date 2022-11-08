@@ -31,12 +31,13 @@ $socialLinksClass = Components::classnames([
 	Components::selector($additionalClass, $additionalClass),
 ]);
 
-echo Components::render('heading',
-[
-	'headingContent' => 'Follow us on social media',
-	'headingSize' => 'big'
-]);
-
+echo Components::render(
+	'heading',
+	[
+		'headingContent' => 'Follow us on social media',
+		'headingSize' => 'big'
+	]
+);
 ?>
 <ul class="<?php echo esc_html($socialLinksClass); ?>">
 	
@@ -57,7 +58,7 @@ echo Components::render('heading',
 		if (
 			empty($href)
 			|| empty($icon)
-			|| !isset($manifest['icons'][$icon]) // @phpstan-ignore-line
+			|| !isset($manifest['icons'][$icon])
 		) {
 			continue;
 		}
@@ -72,8 +73,8 @@ echo Components::render('heading',
 				rel="noreferrer noopener"
 			>
 				<img class="<?php echo esc_html("{$componentClass}__img"); ?>"
-					 alt="<?php echo $linkTitle; ?>"
-					 src="<?php echo $manifest['icons'][$icon]; ?>"
+					 alt="<?php echo esc_attr($linkTitle); ?>"
+					 src="<?php echo esc_attr($manifest['icons'][$icon]); ?>"
 				/>
 			</a>
 		</li>
