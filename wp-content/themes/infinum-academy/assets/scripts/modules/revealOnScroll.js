@@ -8,8 +8,6 @@ class RevealOnScroll {
 		this.hideInitially();
 		this.scrollThrottle = throttle(this.calculateCallback, 200).bind(this);
 		this.events();
-		console.log(window.scrollY);
-		console.log(this.browserHeight); this.itemsToReveal.forEach( element => {console.log(element.offsetTop)});
 	}
 
 	calculateCallback() {
@@ -17,7 +15,7 @@ class RevealOnScroll {
 			if(element.isRevealed === false){
 				this.calculateIfScrolledTo(element);
 			}
-		})
+		});
 	}
 
 	events() {
@@ -42,7 +40,7 @@ class RevealOnScroll {
 
 	hideInitially() {
 			this.itemsToReveal.forEach(element => {
-				if(element.offsetTop > this.browserHeight){
+				if(element.offsetTop > window.scrollY + this.browserHeight){
 					element.isRevealed = false;
 				} else {
 					element.isRevealed = true;

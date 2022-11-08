@@ -23,6 +23,7 @@ $selectorClass = $attributes['selectorClass'] ?? $componentClass;
 $layoutHomeMeta = Components::checkAttr('layoutHomeMeta', $attributes, $manifest);
 $layoutHomeSidebar = Components::checkAttr('layoutHomeSidebar', $attributes, $manifest);
 $layoutHomeMain = Components::checkAttr('layoutHomeMain', $attributes, $manifest);
+$paragraphContent = Components::checkAttr('paragraphContent', $attributes, $manifest);
 
 $layoutHomeClass = Components::classnames([
 	Components::selector($componentClass, $componentClass),
@@ -49,18 +50,35 @@ $unique = Components::getUnique();
 					'headingContent' => 'This is blog about travel photography',
 					'headingSize' => 'huge',
 					'headingColor' => 'white'
-				]
-				));
+				])
+			);
 			?>
 		</div>
 	</div>
 
 	<div class="<?php echo esc_attr("{$componentClass}__view"); ?>">
-		<?php echo Components::ensureString($layoutHomeMain); ?>
+		<?php echo Components::ensureString($layoutHomeMain); // phpcs:ignore Eightshift.Security.ComponentsEscape.OutputNotEscaped 
+		?>
 	</div>
 
 	<div class="<?php echo esc_attr("{$componentClass}__second-page"); ?>">
-
+		<div class="<?php echo esc_attr("{$componentClass}__second-page__background"); ?>"> 
+			<?php
+				echo Components::render(
+					'bordered-grid',
+					Components::props('bordered-grid', $attributes, [
+						'blockClass' => $componentClass,
+						'headingOneContent' => 'Travel page',
+						'paragraphOneContent' => $paragraphContent,
+						'headingTwoContent' => 'Travel page',
+						'paragraphTwoContent' => $paragraphContent,
+						'headingThreeContent' => 'Travel page',
+						'paragraphThreeContent' => $paragraphContent,
+						'headingFourContent' => 'Travel page',
+						'paragraphFourContent' => $paragraphContent,
+						])
+				);
+				?>
+		</div>
 	</div>
-
 </div>

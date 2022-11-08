@@ -4,6 +4,7 @@
 	&__view {
 		height: 100vh;
 		padding-top: 5rem;
+		min-height: 750px;
 	}
 
 	&__intro {
@@ -11,25 +12,50 @@
 
 		background: url('/wp-content/uploads/2022/11/pexels-photo-368893.jpeg');
 		background-attachment: fixed;
-    	background-size: cover;
-    	height: 130vh;
+		background-size: cover;
+		height: 100vh;
 
+		@include media (tablet up) {
+			height: 130vh;
+		}
 		display: flex;
 		justify-content: center;
 	}
 
 	&__second-page {
+		position: relative;
 		background: url('/wp-content/uploads/2022/11/travel-gear.webp');
 		background-attachment: fixed;
-    	background-size: cover;
-    	height: 110vh;
+		background-size: cover;
+		height: auto;
+		padding-bottom: 2rem;
+		padding-top: 3rem;
+
+		@include media(tablet up) {
+			height: 110vh;
+			padding-top: 10rem;
+			padding-bottom: 8rem;
+			min-height: 750px;
+		}
+
+		&__background {
+			margin-left: auto;
+			margin-right: auto;
+			width: 80%;
+
+			@include media(tablet up) {
+				width: 60%;
+			}
+			background-color: rgba(255, 255, 255, 0.7);
+		}
 	}
 
 	@keyframes slideInAnimation {
 		0% {
 			opacity: 0;
-			top: 53%
+			top: 53%;
 		}
+
 		100% {
 			opacity: 1;
 			top: 50%;
@@ -42,18 +68,18 @@
 		transform: translateY(-50%);
 		text-align: center;
 
-		background-color: rgba(255,255,255, 0.2);
-		border: 1.5rem solid rgba(255,255,255, 0.2);
+		background-color: rgba(255, 255, 255, 0.2);
+		border: 1.5rem solid rgba(255, 255, 255, 0.2);
 		max-width: 80vw;
 		padding: 1rem;
+
 		@include media(tablet up) {
 			width: 65rem;
-			border: 2rem solid rgba(255,255,255, 0.2);
+			border: 2rem solid rgba(255, 255, 255, 0.2);
 			padding: 1rem 7rem;
 		}
 
 		animation-name: slideInAnimation;
 		animation-duration: 1.5s;
 	}
-
 }

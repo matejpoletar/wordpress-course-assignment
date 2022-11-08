@@ -4,6 +4,6 @@
  * Usage: `WordPress frontend screen`.
  */
 
-import RevealOnScroll from './modules/revealOnScroll'
+import RevealOnScroll from './modules/revealOnScroll';
 
-let revealOnScroll = new RevealOnScroll()
+new RevealOnScroll();
