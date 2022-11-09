@@ -35,6 +35,7 @@ $pictureClass = Components::classnames([
 $imgClass = Components::classnames([
 	Components::selector($componentClass, $componentClass, 'img'),
 	Components::selector($blockClass, $blockClass, "{$selectorClass}-img"),
+	Components::selector($additionalClass, $additionalClass),
 ]);
 
 ?>

@@ -19,5 +19,17 @@
 		max-height: var(--image-img-max-height, 100%);
 
 		object-fit: cover;
+
+		transition: transform 800ms ease-out, opacity 1.5s ease-out;
+
+		&:hover {
+			transform: scale(1.03);
+		}
+
+		opacity: 0;
+
+		&--is-visible {
+			opacity: 1;
+		}
 	}
 }

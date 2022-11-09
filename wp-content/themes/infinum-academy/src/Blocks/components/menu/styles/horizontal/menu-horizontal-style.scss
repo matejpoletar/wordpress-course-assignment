@@ -18,8 +18,8 @@ $menu-horizontal: (
 	height: 100%;
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
-	gap: 0.75rem;
 
 	&__link {
 		text-decoration: underline;
@@ -28,13 +28,16 @@ $menu-horizontal: (
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: color 0.3s, text-decoration-color 0.3s ease-in-out;
+		transition: text-decoration-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 		overflow-wrap: anywhere;
+		font-size: 1.75rem;
+		padding: 1rem 2rem;
 
 		@include link($menu-horizontal, link-modifiers);
 
 		&:hover {
 			text-decoration-color: map-get-deep($menu-horizontal, link-modifiers, hover, text-decoration-color);
+			background-color: var(--global-colors-minsk-opaque);
 		}
 
 		@media (prefers-contrast: more) {
