@@ -20,6 +20,18 @@ echo Components::render(
 		'layoutThreeColumnsAriaRole' => 'contentinfo',
 		'additionalClass' => 'footer',
 		'layoutThreeColumnsLeft' => Components::render(
+			'social-links',
+			[]
+		),
+	]
+),
+
+Components::render(
+	'layout-three-columns',
+	[
+		'layoutThreeColumnsAriaRole' => 'contentinfo',
+		'additionalClass' => 'footer',
+		'layoutThreeColumnsLeft' => Components::render(
 			'menu',
 			[
 				'variation' => 'horizontal',

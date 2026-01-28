@@ -1,0 +1,29 @@
+{
+	"componentName": "layout-home",
+	"title": "Layout home",
+	"componentClass": "layout-home",
+	"example": {
+		"attributes": {
+			"layoutHomeUse": true
+		}
+	},
+	"attributes": {
+		"layoutHomeMeta": {
+			"type": "array"
+		},
+		"layoutHomeSidebar": {
+			"type": "array"
+		},
+		"layoutHomeMain": {
+			"type": "array"
+		},
+		"layoutHomeUse": {
+			"type": "boolean",
+			"default": true
+		},
+		"paragraphContent": {
+			"type": "string",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+		}
+	}
+}

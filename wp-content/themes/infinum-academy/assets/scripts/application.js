@@ -3,3 +3,7 @@
  *
  * Usage: `WordPress frontend screen`.
  */
+
+import RevealOnScroll from './modules/revealOnScroll';
+
+new RevealOnScroll();

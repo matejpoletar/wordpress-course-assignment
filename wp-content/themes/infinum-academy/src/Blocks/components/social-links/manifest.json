@@ -1,0 +1,48 @@
+{
+	"$schema": "https://raw.githubusercontent.com/infinum/eightshift-frontend-libs/develop/schemas/component.json",
+	"componentName": "social-links",
+	"title": "Social Links",
+	"componentClass": "social-links",
+	"example": {
+		"attributes": {
+			"socialLinksUse": true
+		}
+	},
+	"attributes": {
+		"socialLinksItems": {
+			"type": "array",
+			"default": [
+				{
+					"href": "https://www.facebook.com",
+					"title": "Facebook",
+					"icon": "facebook"
+				},
+				{
+					"href": "https://twitter.com",
+					"title": "Twitter",
+					"icon": "twitter"
+				},
+				{
+					"href": "https://www.instagram.com/",
+					"title": "Instagram",
+					"icon": "instagram"
+				},
+				{
+					"href": "https://www.youtube.com/",
+					"title": "YouTube",
+					"icon": "youtube"
+				}
+			]
+		},
+		"socialLinksUse": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"icons": {
+		"facebook": "/wp-content/uploads/2022/11/facebook-150x150.png",
+		"twitter": "/wp-content/uploads/2022/11/twitter-150x150.png",
+		"instagram": "/wp-content/uploads/2022/11/instagram-150x150.png",
+		"youtube": "/wp-content/uploads/2022/11/youtube-150x150.png"
+	}
+}
